@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selva1"
+    tools:context="com.dc.hungrymonkeys.SettingsActivity">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="80dp"
+            >
+                <TextView
+                    android:id="@+id/settings_textView"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="9dp"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="true"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fondoreglas3"
+                    android:longClickable="true"
+                    android:text="1. ¡Consigue más frutas que tu oponente en más categorías que él!\n
+2. Os movereis por turnos\n
+3. Y de una en una casilla\n
+4. Solo de arriba a abajo o de derecha a izquierda\n
+5. No podeis coincidir en una misma casilla en el mismo instante.\n
+6. El juego termina cuando no quedan frutas en el tablero, o cuando uno de vosotros tenga suficientes frutas para haber ganado.\n
+7. ¡A divertirse!" />
+        </ScrollView>
+
+
+
+</RelativeLayout>

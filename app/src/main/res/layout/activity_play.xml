@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Fondo"
+    android:background="@drawable/selva1"
+    tools:context="com.dc.hungrymonkeys.PlayActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animacion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/pantalla_de_juego"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:background="#FFF">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FF52F2">
+
+                <TextView
+                    android:id="@+id/blanco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/Player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="YOU"
+                    android:textSize="26sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/player1_apple_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_apple1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/apple" />
+                <TextView
+                    android:id="@+id/Apple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="(3)  " />
+                <TextView
+                    android:id="@+id/Number_apple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="  0" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/player1_pear_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_pear1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/pear" />
+
+                <TextView
+                    android:id="@+id/Pear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="(3)" />
+                <TextView
+                    android:id="@+id/Number_pear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="  0" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/player1_orange_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageView
+                    android:id="@+id/img_orange1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignTop="@+id/boton3"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/orange" />
+                <TextView
+                    android:id="@+id/Orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="(3)" />
+                <TextView
+                    android:id="@+id/Number_orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="  0" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/table2"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:background="#FFF">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0A6AFE">
+
+
+                <TextView
+                    android:id="@+id/blanco2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="26sp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/Player2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" AI"
+                    android:textSize="26sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/playerAI_apple_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_apple2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/apple" />
+
+                <TextView
+                    android:id="@+id/Apple2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:textSize="26sp"
+                    android:text="(3)" />
+                <TextView
+                    android:id="@+id/Number_apple2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="    0" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/playerAI_pear_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_pear_2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/pear" />
+
+                <TextView
+                    android:id="@+id/Pear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="(3)" />
+                <TextView
+                    android:id="@+id/Number_pear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="    0" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/playerAI_orange_row"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ImageView
+                    android:id="@+id/img_orange2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/orange" />
+                <TextView
+                    android:id="@+id/Orange2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="(3)" />
+                <TextView
+                    android:id="@+id/Number_orange2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:text="    0" />
+            </TableRow>
+
+        </TableLayout>
+
+
+
+        <com.dc.hungrymonkeys.Matrix
+            android:id="@+id/Matrix"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/table1"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
