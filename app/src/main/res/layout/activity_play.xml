@@ -8,6 +8,7 @@
     android:background="@drawable/selva1"
     tools:context="com.dc.hungrymonkeys.PlayActivity">
 
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animacion"
         android:layout_width="match_parent"
@@ -178,7 +179,6 @@
                     android:id="@+id/Apple2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#FFF"
                     android:textSize="26sp"
                     android:text="(3)" />
                 <TextView

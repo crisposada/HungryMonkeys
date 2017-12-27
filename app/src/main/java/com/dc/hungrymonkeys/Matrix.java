@@ -86,6 +86,8 @@ public class Matrix extends View implements View.OnTouchListener {
 
             }
         }else{
+            setOnTouchListener(null);
+            System.out.println("----ganada? "+ganada);
             activity.partidaFinalizada(ganada);
         }
     }
@@ -127,6 +129,9 @@ public class Matrix extends View implements View.OnTouchListener {
             invalidate();
         }
         else{
+
+            setOnTouchListener(null);
+            System.out.println("----Turno de la maquina");
             ganada=false;
             partida_finalizada=true;
             invalidate();
@@ -527,6 +532,9 @@ public class Matrix extends View implements View.OnTouchListener {
                     invalidate();
                 }
                 else{
+
+                    setOnTouchListener(null);
+                    System.out.println("----Mi turno");
                     ganada=true;
                     partida_finalizada=true;
                     invalidate();

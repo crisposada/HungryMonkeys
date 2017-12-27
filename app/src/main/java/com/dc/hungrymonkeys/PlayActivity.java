@@ -1,8 +1,10 @@
 package com.dc.hungrymonkeys;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TableRow;
@@ -78,6 +80,7 @@ public class PlayActivity extends Activity {
 
     public void partidaFinalizada(boolean ganada){
         LottieComposition.Factory.fromAssetFileName(this, ganada?"trophy.json":"crying.json", new OnCompositionLoadedListener() {
+            @SuppressLint("ClickableViewAccessibility")
             @Override
             public void onCompositionLoaded(@Nullable LottieComposition composition) {
                 animacion.setComposition(composition);
@@ -85,6 +88,13 @@ public class PlayActivity extends Activity {
                 animacion.playAnimation();
                 fondo.setBackgroundColor(getResources().getColor(R.color.white));
                 pantalla_de_juego.setVisibility(View.GONE);
+                fondo.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View view, MotionEvent motionEvent) {
+                        onBackPressed();
+                        return false;
+                    }
+                });
             }
         });
 
@@ -118,6 +128,13 @@ public class PlayActivity extends Activity {
 
     @Override
     public void onBackPressed() {
+
+        if(lose.isPlaying()){
+            lose.stop();
+        }
+        if(win.isPlaying()){
+            win.stop();
+        }
 
         super.onBackPressed();
         overridePendingTransition(0, 0);
